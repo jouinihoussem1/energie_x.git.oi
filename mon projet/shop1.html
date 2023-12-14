@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Gym Shop</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url(./images/gym2.jpg);
+            color: #ffffff;
+        }
+
+        header {
+            background-color: red;
+            padding: 20px;
+            text-align: center;
+        }
+
+        section {
+            display: grid;
+            grid-template-areas: "product product product product";
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .product {
+            background-color: black;
+            border-radius: 10px;
+            margin: 20px;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+            margin-bottom: 40px;
+        }
+
+        .product:hover {
+            transform: scale(1.05);
+        }
+
+        .product img {
+            height: 300px;
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .product h2 {
+            color: #ff0000;
+            margin-top: 10px;
+        }
+
+        .product p {
+            margin-top: 10px;
+            color: #999999;
+        }
+
+        .product button {
+            background-color: #ff0000;
+            color: #ffffff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            width: 80%;
+            margin-top: 15px;
+            border-radius: 5px;
+        }
+
+        .product button:hover {
+            background-color: red;
+        }
+
+        footer {
+            background-color: black;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .icon {
+            position: absolute;
+            left: 1rem;
+            fill: #777;
+            width: 1rem;
+            height: 1rem;
+         }
+        .h12
+        {
+            font-size: 2.5em;
+            margin: 10px 0;
+            text-shadow: 0px 0px 10px rgb(0, 0, 0),
+                        0px 0px 20px rgb(0, 0, 0),
+                        0px 0px 40px rgb(0, 0, 0),
+                             0px 0px 80px rgb(0, 0, 0);
+            color: red;
+            text-align: center;
+            color: red;
+        }
+        .contact{
+            color: white;
+            font-size: 25px;
+            font-weight: bold;
+            margin-top: 50px;
+            margin-left: 100px;
+        }
+        nav ul{
+            text-decoration: none;
+            list-style: none;
+            padding: 0%;
+            color: rgb(0, 0, 0);
+            font-weight: bold;
+        }
+        ul a 
+        {
+            text-decoration: none ;
+            color: gold;
+        }
+        nav
+        {
+            justify-content: center;
+
+        }
+        ul a:hover{cursor: pointer;
+            color: #ffffff;
+            text-decoration: none;
+        }
+.loader 
+{
+    width: 200px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    justify-content: space-evenly;
+    transition-delay: 1000ms;
+}
+
+
+.ball 
+{
+    margin-top: 50px;
+    margin-left: 20px;
+    list-style: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ff0000;
+
+}
+  
+.ball:nth-child(1) {
+    animation: bounce-1 2.1s ease-in-out infinite;
+}
+  
+@keyframes bounce-1 {
+    50% {
+      transform: translateY(-18px);
+      width: 6px;
+      height: 6px;
+    }
+}
+  
+.ball:nth-child(2) {
+    animation: bounce-3 2.1s ease-in-out 0.3s infinite;
+}
+  
+@keyframes bounce-2 {
+    50% {
+      transform: translateY(-18px);
+      width: 6px;
+      height: 6px;
+    }
+  }
+  
+.ball:nth-child(3) {
+    animation: bounce-3 2.1s ease-in-out 0.6s infinite;
+  }
+  
+@keyframes bounce-3 {
+    50% {
+      transform: translateY(-18px);
+      width: 6px;
+      height: 6px;
+    }
+}
+.loading h1
+{
+color: #ce0b0b;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-size: 10vw;
+text-align: center;
+user-select: none;
+
+}
+.loading h1 span{
+color: white;
+}
+.loading_hide
+{
+    opacity: 0;
+    visibility: hidden;
+}
+.loading
+{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100vh;
+    background-color: #1A1A1C;
+    transition-duration: 1000ms;
+    transition-delay: 1000ms;
+}
+
+        .f1{
+            
+            justify-content: baseline;
+            background-color: black;
+            display: grid;
+            grid-template-columns: auto auto auto ;
+        }
+        .input {
+            height: 50px;
+            line-height: 28px;
+            padding: 0 1rem;
+             width: 400px;
+            padding-left: 2.5rem;
+            border: 2px solid transparent;
+            border-radius: 8px;
+            outline: none;
+            background-color: #D9E8D8;
+            color: #0d0c22;
+            box-shadow: 0 0 5px #C1D9BF, 0 0 0 10px #f5f5f5eb;
+            transition: .3s ease;
+        }
+        .group {
+            display: flex;
+            line-height: 28px;
+            align-items: center;
+            position: relative;
+            max-width: 400px;
+        }
+        .f2{
+            background-color: #777;
+             display: grid;
+            grid-template-rows: auto;
+        }
+        .gym1{
+            width: 300px;
+            height: 120px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="loading">
+        <h1>loading</h1>
+        <div class="loader">
+            <li class="ball"></li>
+            <li class="ball"></li>
+            <li class="ball"></li>
+          </div>
+    </div>
+    <header>
+        <div class="f1">
+       <img src="./images/gym1.png" alt="logo" class="gym1"> 
+          <div class="group">
+        <svg class="icon" aria-hidden="true" viewBox="0 0 24 24">
+            <g>
+                <path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 
+                4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path>
+            </g>
+        </svg>
+        <input placeholder="Search" type="search" class="input">
+    </div>
+          <div class="contact"> CONTACT US +21671852669</div>
+        </div>
+        <nav class="f2" >
+        <ul>
+            <li class="A"><a href="index.html">HOME</a></li>
+        </ul>
+            </nav>
+    </header>
+
+<h1 class="h12">PERFECT GYM STORE!!</h1>
+    <section>
+        <div class="product">
+            <img src="./images/p1.jpg" alt="Mass Gainer">
+            <h2>nitro tech</h2>
+            <p>High-quality mass gainer to help you achieve your bulking goals.</p>
+            <p>$29.99</p>
+            <a href="payment.html">
+                <button>Add to Cart</button></a>
+        </div>
+
+        <div class="product">
+            <img src="./images/p2.jpg" alt="Creatine">
+            <h2>whey premuim</h2>
+            <p>Pure whey premuim for enhanced strength and muscle recovery.</p>
+            <p>$19.99</p><a href="payment.html">
+            <button>Add to Cart</button></a>
+        </div>
+        
+        <div class="product">
+            <img src="./images/p3.jpg" alt="Creatine">
+            <h2>Creatine</h2>
+            <p>Pure creatine monohydrate for enhanced strength and muscle recovery.</p>
+            <p>$19.99</p>
+            <a href="payment.html">
+                <button>Add to Cart</button></a>
+        </div>
+        
+        <div class="product">
+            <img src="./images/p4.jpg" alt="Creatine">
+            <h2>Whey</h2>
+            <p>Pure whey for enhanced strength and muscle recovery.</p>
+            <p>$19.99</p>
+            <a href="payment.html">
+                <button>Add to Cart</button></a>
+        </div>
+        <div class="product">
+            <img src="./images/p5.jpg" alt="Creatine">
+            <h2>Whey</h2>
+            <p>Pure whey for enhanced strength and muscle recovery.</p>
+            <p>$19.99</p>
+            <a href="payment.html">
+                <button>Add to Cart</button></a>
+        </div>
+        <div class="product">
+            <img src="./images/p6.jpg" alt="Creatine">
+            <h2>creatine</h2>
+            <p>Pure creatine for enhanced strength and muscle recovery.</p>
+            <p>$19.99</p>
+            <a href="payment.html">
+                <button>Add to Cart</button></a>
+        </div>
+        <div class="product">
+            <img src="./images/p7.jpg" alt="Creatine">
+            <h2>Whey</h2>
+            <p>Pure whey for enhanced strength and muscle recovery.</p>
+            <p>$19.99</p>
+            <a href="payment.html">
+                <button>Add to Cart</button></a>
+        </div>
+        <div class="product">
+            <img src="./images/p8.jpg" alt="Creatine">
+            <h2>mass gainer</h2>
+            <p>Pure mass for enhanced strength and muscle recovery.</p>
+            <p>$19.99</p>
+            <a href="payment.html">
+                <button>Add to Cart</button></a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Your Gym Shop. All rights reserved.</p>
+    </footer>
+    <script>
+        window.addEventListener("load", () => {
+    document.querySelector(".loading").classList.add("loading_hide");
+    });
+    </script>
+</body>
+</html>

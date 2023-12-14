@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='nutrition.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+  <div class="loading">
+    <h1>loading</h1>
+    <div class="loader">
+        <li class="ball"></li>
+        <li class="ball"></li>
+        <li class="ball"></li>
+      </div>
+</div>
+    <h1>Introduction aux Macronutriments</h1><br><br>
+    <h2>Decouvrez les bienfaites de macronutriments :</h2><br>
+    
+    <p style="text-align: center;">Les macronutriments sont des éléments nutritifs essentiels dont le corps a besoin en grandes quantités. 
+        Ils fournissent l'énergie nécessaire pour soutenir les fonctions corporelles de base et participent à la croissance et au développement.
+        <ul type="square">
+            <li>Les glucides contiennent 4 kcal par gramme.</li>
+            <li>Les protéines contiennent 4 kcal par gramme.</li>
+            <li>Les lipides contiennent 9 kcal par gramme (ce qui est approximativement le double de la quantité trouvée dans les deux autres macronutriments).</li>
+        </ul>
+    </p>
+    
+    <div class="images">
+    <div class="card-container">
+        <div class="card">
+        <div class="img-content">
+            <a href=""><img src="./img/Protein.webp"></a>
+         
+        </div>
+        <div class="content">
+          <p class="heading">protein</p>
+          <p>
+            Decouvrez les bienfaites de proteins
+          </p>
+        </div>
+      </div>
+      </div>
+      <div class="card-container">
+        <div class="card">
+        <div class="img-content">
+            <a href=""><img src="./img/lipides.jpg"></a>
+         
+        </div>
+        <div class="content">
+          <p class="heading">Lipides</p>
+          <p>
+            Decouvrez les bienfaites de lipides
+          </p>
+        </div>
+      </div>
+      </div>
+      <div class="card-container">
+        <div class="card">
+        <div class="img-content">
+            <a href=""><img src="./img/glucides.webp"></a>
+         
+        </div>
+        <div class="content">
+          <p class="heading">glucides</p>
+          <p>
+            Decouvrez les bienfaites de proteins
+          </p>
+        </div>
+      </div>
+      </div>
+      <br><br>
+    </div>
+    
+<div class="sections">
+    <section id="prot">
+        <h2>Protéines</h2>
+        <p>Les protéines sont essentielles à la croissance, à la réparation des tissus et au bon fonctionnement du système immunitaire. Elles se trouvent dans des aliments tels que la viande, le poisson, les œufs, les produits laitiers, les noix et les graines.</p>
+    </section>
+<br>
+    <section>
+        <h2 id="lip">Lipides (Graisses)</h2>
+        <p>Les lipides sont une source concentrée d'énergie et sont importants pour la structure des cellules, l'absorption des vitamines liposolubles et d'autres fonctions corporelles. Les lipides se trouvent dans des aliments tels que les huiles, les avocats, les noix et les poissons gras.</p>
+    </section><br>
+
+    <section id="glu" class="glu">
+        <h2>Glucides</h2>
+        <p>Les glucides sont l'une des principales sources d'énergie pour le corps. Il existe deux types de glucides :</p>
+        
+        <h3>Glucides simples</h3>
+        <p>Les glucides simples sont des sucres simples qui sont rapidement absorbés par le corps. Ils se trouvent dans des aliments tels que les fruits, le miel et le sucre de table.</p>
+
+        <h3>Glucides complexes</h3>
+        <p>Les glucides complexes sont composés de plusieurs molécules de sucre et sont présents dans des aliments tels que les céréales complètes, les légumes et les légumineuses. Ils fournissent une libération d'énergie plus soutenue.</p>
+    </section></div>
+
+    <script>
+      window.addEventListener("load", () => {
+  document.querySelector(".loading").classList.add("loading_hide");
+  });
+  </script>
+</body>
+</html>

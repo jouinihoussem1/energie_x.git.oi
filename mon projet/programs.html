@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Training Programs</title>
+    <style>
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            grid-template-columns: 1fr ;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #000000;
+            padding: 15px;
+            text-align: center;
+            width: 100%;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+
+
+        h2 {
+            font-size: 1.8em;
+            margin-top: 20px;
+            color: #a52011;
+        }
+
+        p {
+            font-size: 1.3em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .program-container 
+        {
+            margin-top: 20px;
+            justify-self: center;
+            background-color: #000000;
+            color: #ecf0f1;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: left;
+            max-width: 800px;
+            width: 100%;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            margin-bottom: 30px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            font-size: 1.2em;
+            margin-bottom: 15px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background-color: #000000;
+            color: #ecf0f1;
+            padding: 30px;
+            text-align: center;
+            width: 100%;
+            margin-top: auto;
+        }
+
+        .contact-section {
+            max-width: 800px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        input, textarea {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ffffff;
+            border-radius: 4px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #e74c3c;
+            color: #ffffff;
+            padding: 10px 20px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        button:hover {
+            background-color: #c0392b;
+        }
+        .vid
+        {
+            border-radius: 20px;
+            position: relative;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+        }
+        .vid1
+        {
+            margin-top: 900px;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+        }
+        .vid2
+        {
+            margin-top: 1500px;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+        }
+        button 
+        {
+            color: #000000;
+            padding: 17px 40px;
+            border-radius: 50px;
+            cursor: pointer;
+            border: 0;
+            background-color: white;
+            box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            font-size: 15px;
+            transition: all 0.5s ease;
+        }
+
+        button:hover 
+        {
+            letter-spacing: 3px;
+             background-color: hsl(0, 80%, 48%);
+             color: hsl(0, 0%, 100%);
+            box-shadow: rgb(220, 24, 24) 0px 7px 29px 0px;
+        }
+
+        button:active {
+            letter-spacing: 3px;
+            background-color: hsl(0, 80%, 48%);
+            color: hsl(0, 0%, 100%);
+            box-shadow: rgb(220, 24, 24) 0px 0px 0px 0px;
+            transform: translateY(10px);
+            transition: 100ms;
+        }
+        .loader 
+{
+    width: 200px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    justify-content: space-evenly;
+    transition-delay: 1000ms;
+}
+
+
+.ball 
+{
+    margin-top: 50px;
+    margin-left: 20px;
+    list-style: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ff0000;
+
+}
+  
+.ball:nth-child(1) {
+    animation: bounce-1 2.1s ease-in-out infinite;
+}
+  
+@keyframes bounce-1 {
+    50% {
+      transform: translateY(-18px);
+      width: 6px;
+      height: 6px;
+    }
+}
+  
+.ball:nth-child(2) {
+    animation: bounce-3 2.1s ease-in-out 0.3s infinite;
+}
+  
+@keyframes bounce-2 {
+    50% {
+      transform: translateY(-18px);
+      width: 6px;
+      height: 6px;
+    }
+  }
+  
+.ball:nth-child(3) {
+    animation: bounce-3 2.1s ease-in-out 0.6s infinite;
+  }
+  
+@keyframes bounce-3 {
+    50% {
+      transform: translateY(-18px);
+      width: 6px;
+      height: 6px;
+    }
+}
+.loading h1
+{
+color: #ce0b0b;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-size: 10vw;
+text-align: center;
+user-select: none;
+
+}
+.loading h1 span{
+color: white;
+}
+.loading_hide
+{
+    opacity: 0;
+    visibility: hidden;
+}
+.loading
+{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100vh;
+    background-color: #1A1A1C;
+    transition-duration: 1000ms;
+    transition-delay: 1000ms;
+}
+a
+{
+    color: darkorchid;
+}
+.H12
+{
+            font-size: 2.5em;
+            margin: 10px 0;
+            text-shadow: 0px 0px 10px red,
+                         0px 0px 20px red,
+                         0px 0px 40px red,
+                         0px 0px 80px red;
+            color: red;
+}
+    </style>
+</head>
+<body>
+    <div class="loading">
+        <h1>loading</h1>
+        <div class="loader">
+            <li class="ball"></li>
+            <li class="ball"></li>
+            <li class="ball"></li>
+          </div>
+    </div>
+    <header>
+        <h1 class="H12">Professional Training Programs</h1>
+    </header>
+    <video autoplay loop muted plays-inline class="vid">
+        <source src="./video/Sam Sulek Edit.mp4">
+    </video>
+    <div class="program-container">
+        <h2>Bodybuilding:</h2>
+        <ul>
+            <li><strong>5x5 StrongLifts:</strong> A program focusing on strength and muscle building.</li>
+            <li><strong>Hypertrophy Training:</strong> Designed to enhance muscle size and definition.</li>
+            <li><strong>Push-Pull Legs (PPL):</strong> A balanced approach for upper body development.</li>
+        </ul>
+        <a href="https://youtu.be/71op1DQ2gyo?si=5zLYEVth1gZB7nCz">https://youtu.be/71op1DQ2gyo?si=5zLYEVth1gZB7nCz</a>
+        <img src="./images/coach4.jpg" alt="Bodybuilding Image">
+    </div>
+    <video autoplay loop muted plays-inline class="vid1">
+        <source src="./video/Sam Sulek Edit - INTER CELESTIAL 5.0.mp4">
+    </video>
+    <div class="program-container">
+        <h2>Calisthenics:</h2>
+        <ul>
+            <li><strong>Beginner Bodyweight Routine:</strong> Foundational exercises for strength and endurance.</li>
+            <li><strong>Intermediate Calisthenics Program:</strong> Progress to advanced bodyweight exercises.</li>
+            <li><strong>Skills Development:</strong> Mastering advanced calisthenics skills.</li>
+        </ul>
+        <a href="https://youtu.be/gnTzk1yUHB4?si=33Kg7LL0iMG52yBc">https://youtu.be/gnTzk1yUHB4?si=33Kg7LL0iMG52yBc</a>
+        <img src="./images/cal.jpg" alt="Calisthenics Image">
+    </div>
+    <video autoplay loop muted plays-inline class="vid2">
+        <source src="./video/Sam Sulek ӏ GYM Edit.mp4">
+    </video>
+    <div class="program-container">
+        <h2>CrossFit:</h2>
+        <ul>
+            <li><strong>CrossFit WODs (Workouts of the Day):</strong> High-intensity functional movements for overall fitness.</li>
+            <li><strong>CrossFit Endurance:</strong> Improving cardiovascular endurance within the CrossFit framework.</li>
+            <li><strong>CrossFit Strength Bias:</strong> Emphasis on strength development complementing CrossFit workouts.</li>
+        </ul>
+        <a href="https://youtu.be/5IYOeFYbS2Y?si=4vAMWj1HkySe78Xq">https://youtu.be/5IYOeFYbS2Y?si=4vAMWj1HkySe78Xq</a>
+        <img src="./images/Capture d'écran 2023-12-13 225512.png" alt="CrossFit Image">
+    </div>
+
+    <footer>
+        <div class="contact-section">
+            <h2>Contact Us</h2>
+            <div class="contact-form">
+                <input type="text" placeholder="Your Name">
+                <input type="email" placeholder="Your Email">
+                <textarea placeholder="Your Message"></textarea>
+                <button>Send Message</button>
+            </div>
+        </div>
+
+    </footer>
+    <script>
+        window.addEventListener("load", () => {
+    document.querySelector(".loading").classList.add("loading_hide");
+    });
+    </script>
+    </body>
+    </html>
